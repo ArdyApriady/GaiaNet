@@ -112,14 +112,14 @@ view_nodeid() {
 start_bot() {
     echo -e "${INSTALL} Starting Bot...${RESET}"
     
-    read -p "Enter your NODE_ID: " node_id
-    if [ -z "$node_id" ]; then
-        echo -e "${ERROR} NODE_ID cannot be empty!"
-        read -p "Press Enter to return to the main menu."
-        return
-    fi
+   # read -p "Enter your NODE_ID: " node_id
+   # if [ -z "$node_id" ]; then
+    #    echo -e "${ERROR} NODE_ID cannot be empty!"
+     #   read -p "Press Enter to return to the main menu."
+     #   return
+   #fi
     
-    echo "NODE_ID=$node_id" > .env
+    #echo "NODE_ID=$node_id" > .env
     docker compose up --build -d
     
     echo -e "${CHECKMARK} Bot started successfully."

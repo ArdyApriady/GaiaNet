@@ -19,13 +19,30 @@ logger = logging.getLogger(__name__)
 
 class GaiaNetBot:
     def __init__(self):
-        self.node_id = os.getenv("NODE_ID")
-        if not self.node_id:
-            logger.error("❌ Node identifier not configured")
-            sys.exit(1)
 
-        self.api_endpoint = f"https://{self.node_id}.gaia.domains/v1/chat/completions"
+#         api_accounts = []
+#         with open('account.txt', 'r') as file:
+#             for line in file:
+#                     parts = line.strip().split('|')  # Format: API_KEY|API_URL
+#                     if len(parts) == 2:
+#                             api_accounts.append((parts[0], parts[1]))
+#
+#         if not api_accounts:
+#                 print("Error: Tidak ada API Key dan URL yang valid di account.txt!")
+#                 exit()
+#
+#         api_key, api_url = random.choice(api_accounts)
+#
+
+
+        #self.node_id = os.getenv("NODE_ID")
+        #if not self.node_id:
+         #   logger.error("❌ Node identifier not configured")
+          #  sys.exit(1)
+
+        self.api_endpoint = f"https://purples-hub.gaia.domains/v1/chat/completions"
         self.http_headers = {
+            "Authorization": f"Bearer gaia-NWM0ZmIwMTMtMGE5YS00ODAzLWJkZTktZjBhZTNkNjRiNDVm-e-8I7tIylGFRA_IN",
             "Accept": "application/json",
             "Content-Type": "application/json"
         }

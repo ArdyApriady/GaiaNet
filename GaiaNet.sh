@@ -119,7 +119,7 @@ start_bot() {
      #   return
    #fi
     
-    echo "NODE_ID=$node_id" > .env
+    echo "NODE_ID=" > .env
     docker compose up --build -d
     
     echo -e "${CHECKMARK} Bot started successfully."
